@@ -26,21 +26,15 @@ HTML:
 - Each img element represents a photo with its corresponding source and alt text for accessibility.
 
 CSS:
-The box-sizing: border-box ensures consistent element sizing across browsers.
-The body styles define the overall layout, including margins, font family, and background color.
-The header styles configure the header section with text-align, text transformation (uppercase), padding, background color, text color, and a bottom border.
-The gallery styles utilize Flexbox properties to achieve the desired grid layout:
-display: flex: Initializes the container as a flexbox element.
-flex-direction: row: Arranges the images in a row-wise direction.
-flex-wrap: wrap: Allows images to automatically wrap onto new rows when space is limited.
-justify-content: center: Centers the entire image grid horizontally within the container.
-align-items: center: Vertically aligns the image content within each row.
-gap: 16px: Introduces spacing between images for better visual separation.
-max-width: 1400px: Sets a maximum width for the entire gallery container.
-margin: 0 auto: Centers the gallery horizontally within the page.
-padding: 20px 10px: Adds padding to the top and bottom and left and right sides of the gallery container, respectively.
-.gallery img: Styles applied to individual image elements define their width, maximum width, height, object-fit for scaling, and rounded corners using border-radius.
-.gallery::after: This pseudo-element is used to address a potential issue with the last image not filling the remaining space in a row. It's a hidden element with a width equal to the maximum image width, ensuring a consistent layout.
+- display: flex: Establishes the .gallery container as a flex container, enabling flexible item arrangement.
+- flex-wrap: wrap: Allows flex items to wrap onto multiple lines if they don't fit on a single line.
+- justify-content: center: Centers the flex items horizontally within the container.
+- align-items: center: Centers the flex items vertically within the container.
+- gap: Sets the space between flex items.   
+- max-width: Limits the maximum width of the container.
+- margin: 0 auto: Centers the container horizontally on the page.
+- object-fit: cover: Scales the image to fill its container while maintaining aspect ratio.
+- border-radius: Rounds the corners of the images.
 
 Customization:
 You can easily swap out the images in the HTML with your own photos by modifying the src attribute of the img elements.
